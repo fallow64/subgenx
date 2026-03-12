@@ -78,7 +78,6 @@ class YoutubeSource(Source):
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(location, download=True)
             audio_file = ydl.prepare_filename(info)
-            print(audio_file)
             return audio_file
 
 
